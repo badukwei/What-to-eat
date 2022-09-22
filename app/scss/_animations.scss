@@ -1,0 +1,34 @@
+@keyframes fade-1 {
+  from {
+      visibility: hidden;
+      opacity: 0;
+  } 
+  to {
+      visibility: visible;
+      opacity: 1; 
+  }
+}
+
+.fade-1 {
+  animation: fade-1 500ms ease-in-out forwards;
+  :hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.fade-2 {
+  animation: fade-2 500ms ease-in-out forwards;
+}
+
+@keyframes fade-2 {
+  from {
+      visibility: hidden;
+      opacity: 0;
+  } 
+  to {
+      visibility: visible;
+      opacity: 1;        
+  }
+}
+

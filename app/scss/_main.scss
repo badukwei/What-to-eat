@@ -1,0 +1,67 @@
+.background {
+  background: $veryLightGray;
+
+  .container {
+    padding: 0;
+    border-radius: 10px;
+    background-color: $veryLightDarkCyan;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 100px;
+    
+
+    header {
+      padding: 20px;
+      background-color: $verDarkCyan;
+      border-radius: 10px 10px 0px 0px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      color: $veryLightGray;
+
+      h1 {
+        margin: 0;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        font-size: 2rem;
+      }
+    }
+
+    div{
+      text-align: center;
+
+      h3 {
+        margin: 25px 0px 25px 0px;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: $verDarkCyan;
+      }
+
+      .map-container {
+        padding: 0px 30px;
+
+        #map {
+          height: 400px;
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .select-button {
+        margin: 20px 0;
+        padding: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: $verDarkCyan;
+        color: $veryLightGray;
+        font-size: 0.75rem;
+        font-weight: 1000;
+        letter-spacing: 0.05rem;
+      }
+
+      .select-button:hover {
+        font-weight: 1500;
+        font-size: 1rem;
+        transition: background-color 500ms linear;
+        transition: font-size 500ms linear;
+      }
+    }
+  }
+}

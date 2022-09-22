@@ -1,0 +1,130 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.background {
+  background: hsl(0deg, 0%, 95%);
+}
+.background .container {
+  padding: 0;
+  border-radius: 10px;
+  background-color: hsla(179deg, 100%, 13%, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 100px;
+}
+.background .container header {
+  padding: 20px;
+  background-color: hsl(179deg, 100%, 13%);
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  color: hsl(0deg, 0%, 95%);
+}
+.background .container header h1 {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+}
+.background .container div {
+  text-align: center;
+}
+.background .container div h3 {
+  margin: 25px 0px 25px 0px;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: hsl(179deg, 100%, 13%);
+}
+.background .container div .map-container {
+  padding: 0px 30px;
+}
+.background .container div .map-container #map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+.background .container div .select-button {
+  margin: 20px 0;
+  padding: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(179deg, 100%, 13%);
+  color: hsl(0deg, 0%, 95%);
+  font-size: 0.75rem;
+  font-weight: 1000;
+  letter-spacing: 0.05rem;
+}
+.background .container div .select-button:hover {
+  font-weight: 1500;
+  font-size: 1rem;
+  transition: background-color 500ms linear;
+  transition: font-size 500ms linear;
+}
+
+@-webkit-keyframes fade-1 {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-1 {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-1 {
+  -webkit-animation: fade-1 500ms ease-in-out forwards;
+          animation: fade-1 500ms ease-in-out forwards;
+}
+.fade-1 :hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.fade-2 {
+  -webkit-animation: fade-2 500ms ease-in-out forwards;
+          animation: fade-2 500ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-2 {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-2 {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=styles.css.map */
