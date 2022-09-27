@@ -4,6 +4,7 @@ let map, service, pos;
 let markers = [];
 
 //To do: animation, info and marker of restaurant chosen, text slot  
+//網址、input設定
 
 function initMap() {
   let taiwan = new google.maps.LatLng(25.105497, 121.597366);
@@ -73,7 +74,6 @@ const callback = (results, status) => {
     addMarker(pos);
     console.log(results[0]);
     for (let i = 0; i < results.length; i++) {
-      console.log(results[i].name);
       restaurantList.push(results[i].name);
     }
 
@@ -95,8 +95,6 @@ const callback = (results, status) => {
     })
   }
 };
-
-
 
 //Marker's functions
 //Add markers and reset the markers'array 
