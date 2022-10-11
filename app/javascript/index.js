@@ -6,25 +6,7 @@ let markers = [];
 //To do: animation, info and marker of restaurant chosen, text slot  
 //網址、input設定
 
-function initMap() {
-  let taiwan = new google.maps.LatLng(25.105497, 121.597366);
-
-  infoWindow = new google.maps.InfoWindow();
-
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: taiwan,
-    zoom: 15
-  });
-
-  locateNow();
-
-  const infoFunction = () => {
-    
-  }
-};
-
 const locateNow = () => {
-  // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -46,6 +28,20 @@ const locateNow = () => {
   }
 };
 
+function initMap() {
+  let taiwan = new google.maps.LatLng(25.105497, 121.597366);
+
+  infoWindow = new google.maps.InfoWindow();
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: taiwan,
+    zoom: 15
+  });
+
+  locateNow();
+};
+
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(
@@ -65,35 +61,6 @@ const findRestaurantsNearby = () => {
 
   service = new google.maps.places.PlacesService(map);
   service.nearbySearch(request, callback);
-
-};
-
-const callback = (results, status) => {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    let restaurantList = [];
-    addMarker(pos);
-    console.log(results[0]);
-    for (let i = 0; i < results.length; i++) {
-      restaurantList.push(results[i].name);
-    }
-
-    selectButton.addEventListener('click', function () {
-      finnalPick.innerHTML = restaurantList[Math.floor((Math.random() * restaurantList.length))];
-      for (let j = 0; j < results.length; j++) {
-        if (results[j].name == finnalPick.innerHTML) {
-          addMarker(results[j].geometry.location);
-          map.setCenter(results[j].geometry.location);
-        }
-      }
-      if (finnalPick.classList.contains('fade-1')) {
-        finnalPick.classList.remove('fade-1');
-        finnalPick.classList.add('fade-2');
-      } else {
-        finnalPick.classList.remove('fade-2');
-        finnalPick.classList.add('fade-1');
-      }
-    })
-  }
 };
 
 //Marker's functions
@@ -131,6 +98,36 @@ function deleteMarkers() {
   clearMarkers();
   markers = [];
 }
+
+const callback = (results, status) => {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    let restaurantList = [];
+    addMarker(pos);
+    console.log(results[0]);
+    for (let i = 0; i < results.length; i++) {
+      restaurantList.push(results[i].name);
+    }
+
+    selectButton.addEventListener('click', function () {
+      finnalPick.innerHTML = restaurantList[Math.floor((Math.random() * restaurantList.length))];
+      for (let j = 0; j < results.length; j++) {
+        if (results[j].name == finnalPick.innerHTML) {
+          addMarker(results[j].geometry.location);
+          map.setCenter(results[j].geometry.location);
+        }
+      }
+      if (finnalPick.classList.contains('fade-1')) {
+        finnalPick.classList.remove('fade-1');
+        finnalPick.classList.add('fade-2');
+      } else {
+        finnalPick.classList.remove('fade-2');
+        finnalPick.classList.add('fade-1');
+      }
+    })
+  }
+};
+
+
 
 
 

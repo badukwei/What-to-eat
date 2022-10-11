@@ -17,25 +17,25 @@ body {
 .background {
   background: hsl(0deg, 0%, 95%);
 }
-.background .container {
-  padding: 0;
-  border-radius: 10px;
-  background-color: hsla(179deg, 100%, 13%, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-top: 100px;
-}
-.background .container header {
+.background header {
   padding: 20px;
   background-color: hsl(179deg, 100%, 13%);
-  border-radius: 10px 10px 0px 0px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   color: hsl(0deg, 0%, 95%);
 }
-.background .container header h1 {
+.background header h1 {
   margin: 0;
   text-align: center;
   letter-spacing: 0.1rem;
   font-size: 2rem;
+}
+.background .container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10PX;
+  border-radius: 10px;
+  background-color: hsla(179deg, 100%, 13%, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .background .container div {
   text-align: center;
