@@ -30,8 +30,8 @@ body {
   font-size: 2rem;
 }
 .background .container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   padding: 10PX;
   border-radius: 10px;
   background-color: hsla(179deg, 100%, 13%, 0.15);
